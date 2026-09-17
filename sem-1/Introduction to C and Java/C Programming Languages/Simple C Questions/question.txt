@@ -1,0 +1,410 @@
+# Array DSA Questions — C
+
+Here is a **progressive set of array questions**, from basic to interview/competitive-programming level.
+
+## Level 1 — Basics
+
+1. Find the **sum of all elements** in an array.
+2. Find the **maximum element** in an array.
+3. Find the **minimum element** in an array.
+4. Find the **average** of array elements.
+5. Count the **even and odd elements**.
+6. Count **positive, negative, and zero** elements.
+7. Search for an element using **linear search**.
+8. Find the **index of the first occurrence** of an element.
+9. Find the **index of the last occurrence** of an element.
+10. Count the **frequency of a given element**.
+
+---
+
+## Level 2 — Basic Manipulation
+
+11. Reverse an array **in-place**.
+
+12. Copy one array into another.
+
+13. Print an array in **reverse order**.
+
+14. Find the **second largest** element.
+
+15. Find the **second smallest** element.
+
+16. Find the **largest and smallest element simultaneously**.
+
+17. Check whether an array is **sorted in ascending order**.
+
+18. Check whether an array is **sorted in descending order**.
+
+19. Insert an element at a given position.
+
+20. Delete an element from a given position.
+
+---
+
+## Level 3 — Duplicates and Frequency
+
+21. Find all **duplicate elements**.
+
+22. Find the **first duplicate element**.
+
+23. Find the **first non-repeating element**.
+
+24. Find the element that occurs **most frequently**.
+
+25. Find the element that occurs **least frequently**.
+
+26. Count the number of **distinct elements**.
+
+27. Remove duplicates from a **sorted array**.
+
+28. Find the frequency of every element.
+
+Example:
+
+```text
+Input:
+1 2 2 3 3 3 4
+
+Output:
+1 → 1
+2 → 2
+3 → 3
+4 → 1
+```
+
+---
+
+# Level 4 — Important DSA Patterns
+
+29. Move all **zeros to the end**.
+
+Example:
+
+```text
+Input:
+0 1 0 3 12
+
+Output:
+1 3 12 0 0
+```
+
+30. Move all negative numbers to one side.
+
+31. Separate **even and odd** elements.
+
+32. Rearrange an array so that positive and negative elements alternate.
+
+33. Find the **missing number** from `1` to `N`.
+
+Example:
+
+```text
+Input:
+1 2 4 5
+
+Output:
+3
+```
+
+34. Find the element that appears **only once** when every other element appears twice.
+
+35. Find two elements whose sum equals a given target.
+
+```text
+Input:
+2 7 11 15
+Target = 9
+
+Output:
+2, 7
+```
+
+36. Find all pairs whose sum equals a given target.
+
+37. Find three elements whose sum equals a given target (**3-Sum**).
+
+38. Find the **intersection of two arrays**.
+
+39. Find the **union of two arrays**.
+
+40. Find common elements among **three sorted arrays**.
+
+---
+
+# Level 5 — Prefix Sum / Subarray
+
+41. Find the **sum of every subarray**.
+
+42. Find the **maximum subarray sum**.
+
+This is the famous **Kadane's Algorithm** problem.
+
+Example:
+
+```text
+Input:
+-2 1 -3 4 -1 2 1 -5 4
+
+Output:
+6
+```
+
+Because:
+
+```text
+4 + (-1) + 2 + 1 = 6
+```
+
+43. Find the minimum subarray sum.
+
+44. Find whether a subarray with **sum = K** exists.
+
+45. Find the number of subarrays having **sum = K**.
+
+46. Find the **longest subarray with sum K**.
+
+47. Find the longest subarray with equal numbers of `0` and `1`.
+
+48. Find the maximum sum of a subarray of **fixed size K**.
+
+Example:
+
+```text
+Input:
+2 1 5 1 3 2
+K = 3
+
+Output:
+9
+```
+
+because:
+
+```text
+5 + 1 + 3 = 9
+```
+
+---
+
+# Level 6 — Sorting-Based Problems
+
+49. Sort an array containing only `0`, `1`, and `2`.
+
+Example:
+
+```text
+Input:
+2 0 2 1 1 0
+
+Output:
+0 0 1 1 2 2
+```
+
+This is the **Dutch National Flag** problem.
+
+50. Find the **kth largest element**.
+
+51. Find the **kth smallest element**.
+
+52. Find the number of **inversions** in an array.
+
+Example:
+
+```text
+Input:
+2 4 1 3 5
+
+Output:
+3
+```
+
+Inversions:
+
+```text
+(2,1)
+(4,1)
+(4,3)
+```
+
+53. Merge two sorted arrays.
+
+54. Merge overlapping intervals.
+
+55. Find the **median of two sorted arrays**.
+
+---
+
+# Level 7 — Two Pointer / Sliding Window
+
+56. Given a sorted array, find two elements with a given sum.
+
+57. Remove duplicates from a sorted array **in-place**.
+
+58. Find the maximum amount of water that can be stored between vertical lines.
+
+59. Find the maximum sum of a subarray of size `K`.
+
+60. Find the smallest subarray whose sum is at least `K`.
+
+61. Find the longest subarray containing at most `K` distinct elements.
+
+---
+
+# Level 8 — Advanced Array Problems
+
+62. Find the **majority element**.
+
+Example:
+
+```text
+Input:
+2 2 1 1 1 2 2
+
+Output:
+2
+```
+
+63. Find all elements appearing more than `N/3` times.
+
+64. Find the **leaders in an array**.
+
+Example:
+
+```text
+Input:
+16 17 4 3 5 2
+
+Output:
+17 5 2
+```
+
+65. Find the **equilibrium index**.
+
+66. Find the **product of array except itself**.
+
+Example:
+
+```text
+Input:
+1 2 3 4
+
+Output:
+24 12 8 6
+```
+
+67. Find the **next greater element** for every array element.
+
+68. Find the **maximum product subarray**.
+
+69. Find the **trapping rain water**.
+
+Example:
+
+```text
+Input:
+4 2 0 3 2 5
+
+Output:
+9
+```
+
+70. Find the **maximum profit from buying and selling stock**.
+
+---
+
+# Level 9 — Very Important Interview Problems
+
+71. Rotate an array to the **left by K positions**.
+
+72. Rotate an array to the **right by K positions**.
+
+73. Find the **maximum circular subarray sum**.
+
+74. Find the smallest missing **positive integer**.
+
+75. Find the duplicate number when numbers are in the range `1...N`.
+
+76. Find the **majority element using Moore's Voting Algorithm**.
+
+77. Find the maximum profit with **multiple stock transactions**.
+
+78. Find the longest **consecutive sequence**.
+
+Example:
+
+```text
+Input:
+100 4 200 1 3 2
+
+Output:
+4
+```
+
+Sequence:
+
+```text
+1 2 3 4
+```
+
+79. Find the maximum of every **sliding window of size K**.
+
+80. Find the **median of a running stream of numbers**.
+
+---
+
+# Best order to learn
+
+Don't solve these randomly. Follow this sequence:
+
+```text
+Arrays
+  ↓
+Traversal
+  ↓
+Min / Max / Sum
+  ↓
+Searching
+  ↓
+Insertion / Deletion
+  ↓
+Reverse
+  ↓
+Duplicates / Frequency
+  ↓
+Sorting
+  ↓
+Two Pointer
+  ↓
+Prefix Sum
+  ↓
+Sliding Window
+  ↓
+Kadane's Algorithm
+  ↓
+Hashing
+  ↓
+Binary Search on Arrays
+  ↓
+Greedy Array Problems
+  ↓
+Advanced Problems
+```
+
+## 10 questions I recommend solving first
+
+If you're starting DSA in C, solve these first:
+
+1. Find maximum element.
+2. Find second largest element.
+3. Reverse an array.
+4. Check if array is sorted.
+5. Remove duplicates from a sorted array.
+6. Move zeros to the end.
+7. Find the missing number.
+8. Find a pair with a given sum.
+9. Find maximum subarray sum.
+10. Rotate an array by `K` positions.
+
+These 10 introduce the core patterns you'll repeatedly use in harder array problems.
+
+Would you like to start with beginner array questions or jump straight to interview-level problems?
