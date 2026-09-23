@@ -1,4 +1,5 @@
 // 1. Use char, int, float, double, and long variables and display their values and sizes using sizeof()
+
 #include <stdio.h>
 
 int main(void){

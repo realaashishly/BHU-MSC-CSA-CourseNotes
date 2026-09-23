@@ -1,4 +1,5 @@
 // 2. Demonstrate implicit conversion between different data types during arithmetic operations.
+
 #include <stdio.h>
 
 int main(void)
