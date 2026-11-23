@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+
+    int arr[8] = {1, 2, 4, 3, 2, 4, 1, 5};
+    int size = 8;
+    int distinctCount = 0;
+
+
+    for(int i = 0; i < size; i++){
+        int alreadycnt = 0;
+
+        for(int j = 0; j < i; j++){
+            if(arr[i] == arr[j]){
+                alreadycnt = 1;
+                break;
+            }
+        }
+
+        if (!alreadycnt) {
+            distinctCount++;
+        }
+    }
+
+    printf("Number of distinct elements = %d\n", distinctCount);
+
+    printf("\n");
+    return 0;
+}

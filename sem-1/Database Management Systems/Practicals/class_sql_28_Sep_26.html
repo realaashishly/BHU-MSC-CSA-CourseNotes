@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live DEMO: Class of 28 Sep 26</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .code {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.7;
+            font-family: Consolas, monospace;
+            font-size: 15px;
+        }
+
+        /* SQL Keywords */
+        .keyword {
+            color: #569CD6;
+            font-weight: bold;
+        }
+
+        /* Data Types */
+        .datatype {
+            color: #4EC9B0;
+            font-weight: bold;
+        }
+
+        /* Variables / Identifiers */
+        .identifier {
+            color: #DCDCAA;
+        }
+
+        /* Strings */
+        .string {
+            color: #CE9178;
+        }
+
+        /* Numbers */
+        .number {
+            color: #B5CEA8;
+        }
+
+        /* Operators / Symbols */
+        .operator {
+            color: #D4D4D4;
+        }
+
+        /* Comments */
+        .comment {
+            color: #6A9955;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Live DEMO: Class of 28 Sep 26</h1>
+
+    <div class="code">
+
+        <!-- =====================================================
+             CREATION OF DATABASE
+             CREATE DATABASE is used to create a new database.
+             ===================================================== -->
+
+        <span class="comment">-- Creation of Database</span><br>
+
+        <span class="keyword">CREATE DATABASE</span>
+        <span class="identifier">university1</span><span class="operator">;</span>
+        <br>
+
+
+        <!-- SHOW DATABASES displays the databases available in MySQL. -->
+
+        <span class="comment">-- Display available databases</span><br>
+
+        <span class="keyword">SHOW DATABASES</span><span class="operator">;</span>
+        <br>
+
+
+        <!-- USE selects the database on which we want to work. -->
+
+        <span class="comment">-- Select the database to work with</span><br>
+
+        <span class="keyword">USE</span>
+        <span class="identifier">university1</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             CREATION OF TABLE
+             CREATE TABLE creates a new table inside the database.
+             ===================================================== -->
+
+        <span class="comment">-- Creation of Table</span><br>
+
+        <span class="keyword">CREATE TABLE</span>
+        <span class="identifier">student</span>
+        <span class="operator">(</span>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="identifier">roll_num</span>
+        <span class="datatype">INT</span>
+        <span class="keyword">PRIMARY KEY</span>
+        <span class="operator">,</span>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="identifier">name</span>
+        <span class="datatype">VARCHAR</span><span class="operator">(</span><span class="number">50</span><span class="operator">)</span>
+        <span class="operator">,</span>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="identifier">dept</span>
+        <span class="datatype">VARCHAR</span><span class="operator">(</span><span class="number">3</span><span class="operator">)</span>
+        <br>
+
+        <span class="operator">);</span>
+        <br>
+
+
+        <span class="comment">-- Display tables present in the selected database</span><br>
+
+        <span class="keyword">SHOW TABLES</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             INSERTION OF DATA
+             INSERT INTO adds records/rows into a table.
+             ===================================================== -->
+
+        <span class="comment">-- Insertion of first student record</span><br>
+
+        <span class="keyword">INSERT INTO</span>
+        <span class="identifier">student</span>
+        <span class="keyword">VALUES</span>
+        <span class="operator">(</span>
+        <span class="number">1</span><span class="operator">,</span>
+        <span class="string">"Vijay Shekhar"</span><span class="operator">,</span>
+        <span class="string">"CSE"</span>
+        <span class="operator">);</span>
+        <br>
+
+
+        <span class="comment">-- Insertion of second student record</span><br>
+
+        <span class="keyword">INSERT INTO</span>
+        <span class="identifier">student</span>
+        <span class="keyword">VALUES</span>
+        <span class="operator">(</span>
+        <span class="number">2</span><span class="operator">,</span>
+        <span class="string">"Ramesh Kumar"</span><span class="operator">,</span>
+        <span class="string">"ECE"</span>
+        <span class="operator">);</span>
+        <br>
+
+
+        <span class="comment">-- Insertion of third student record</span><br>
+
+        <span class="keyword">INSERT INTO</span>
+        <span class="identifier">student</span>
+        <span class="keyword">VALUES</span>
+        <span class="operator">(</span>
+        <span class="number">3</span><span class="operator">,</span>
+        <span class="string">"Ajeet Raahi"</span><span class="operator">,</span>
+        <span class="string">"CSE"</span>
+        <span class="operator">);</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             UPDATION
+             UPDATE changes existing data in a table.
+             WHERE identifies which record should be changed.
+             ===================================================== -->
+
+        <span class="comment">-- Updation of existing student record</span><br>
+        <span class="comment">-- WHERE ensures that only roll_num = 2 is updated</span><br>
+
+        <span class="keyword">UPDATE</span>
+        <span class="identifier">student</span>
+        <span class="keyword">SET</span>
+        <span class="identifier">name</span>
+        <span class="operator">=</span>
+        <span class="string">"Mahima Manohari"</span>
+        <span class="keyword">WHERE</span>
+        <span class="identifier">roll_num</span>
+        <span class="operator">=</span>
+        <span class="number">2</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             ALTER TABLE
+             ALTER TABLE changes the structure of an existing table.
+             Here, a new email column is added.
+             ===================================================== -->
+
+        <span class="comment">-- Alter Table: Adding a new column</span><br>
+
+        <span class="keyword">ALTER TABLE</span>
+        <span class="identifier">student</span>
+        <span class="keyword">ADD COLUMN</span>
+        <span class="operator">(</span>
+        <span class="identifier">email</span>
+        <span class="datatype">VARCHAR</span><span class="operator">(</span><span class="number">50</span><span class="operator">)</span>
+        <span class="operator">);</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             SELECT
+             SELECT is used to retrieve data from a table.
+             * means all columns.
+             ===================================================== -->
+
+        <span class="comment">-- Display all columns and all rows</span><br>
+
+        <span class="keyword">SELECT</span>
+        <span class="operator">*</span>
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             SELECT WITH ALIAS
+             AS gives a temporary/display name to a column.
+             ===================================================== -->
+
+        <span class="comment">-- SELECT specific columns and rename them using AS</span><br>
+
+        <span class="keyword">SELECT</span>
+        <span class="identifier">roll_num</span>
+        <span class="keyword">AS</span>
+        <span class="string">"Roll Number"</span><span class="operator">,</span>
+        <span class="identifier">name</span>
+        <span class="keyword">AS</span>
+        <span class="string">"Student Name"</span><span class="operator">,</span>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="identifier">dept</span>
+        <span class="keyword">AS</span>
+        <span class="string">"Department"</span><span class="operator">,</span>
+        <span class="identifier">email</span>
+        <span class="keyword">AS</span>
+        <span class="string">"Email"</span>
+        <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             DISTINCT
+             DISTINCT removes duplicate values from the result.
+             ===================================================== -->
+
+        <span class="comment">-- DISTINCT returns unique department values</span><br>
+
+        <span class="keyword">SELECT DISTINCT</span>
+        <span class="identifier">dept</span>
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             WHERE + LIKE
+             WHERE filters rows based on a condition.
+             LIKE is used for pattern matching.
+             % represents zero or more characters.
+             ===================================================== -->
+
+        <span class="comment">-- WHERE filters records based on a condition</span><br>
+        <span class="comment">-- LIKE '%r' finds names ending with the letter 'r'</span><br>
+
+        <span class="keyword">SELECT</span>
+        <span class="identifier">name</span>
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span>
+        <span class="keyword">WHERE</span>
+        <span class="identifier">name</span>
+        <span class="keyword">LIKE</span>
+        <span class="string">'%r'</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             INSERTION AFTER ALTER TABLE
+             The table now has four columns, including email.
+             ===================================================== -->
+
+        <span class="comment">-- Insertion of a record including the newly added email column</span><br>
+
+        <span class="keyword">INSERT INTO</span>
+        <span class="identifier">student</span>
+        <span class="keyword">VALUES</span>
+        <span class="operator">(</span>
+        <span class="number">4</span><span class="operator">,</span>
+        <span class="string">"Manisha Vidyarthi"</span><span class="operator">,</span>
+        <span class="string">"CSE"</span><span class="operator">,</span>
+        <span class="string">"manisha@bhu.ac.in"</span>
+        <span class="operator">);</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             WHERE + IS NULL
+             IS NULL finds records where a column has no value.
+             ===================================================== -->
+
+        <span class="comment">-- WHERE + IS NULL: Find students without an email</span><br>
+
+        <span class="keyword">SELECT</span>
+        <span class="operator">*</span>
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span>
+        <span class="keyword">WHERE</span>
+        <span class="identifier">email</span>
+        <span class="keyword">IS NULL</span><span class="operator">;</span>
+        <br><br>
+
+
+        <!-- =====================================================
+             WHERE + IS NOT NULL
+             IS NOT NULL finds records where a column has a value.
+             ===================================================== -->
+
+        <span class="comment">-- WHERE + IS NOT NULL: Find students having an email</span><br>
+
+        <span class="keyword">SELECT</span>
+        <span class="operator">*</span>
+        <span class="keyword">FROM</span>
+        <span class="identifier">student</span>
+        <span class="keyword">WHERE</span>
+        <span class="identifier">email</span>
+        <span class="keyword">IS NOT NULL</span><span class="operator">;</span>
+
+    </div>
+
+</body>
+</html>
